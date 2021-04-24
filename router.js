@@ -1,6 +1,8 @@
 const express = require('express')
 const rotas = express.Router()
 
+const ler_arquivo = require('./controllers/ler_arquivo')
+
 rotas.get('/', (req, res) => {
     res.send('inicio do projeto')
 })
@@ -15,6 +17,18 @@ rotas.post('/obterJson', (req, res) => {
     var {nome_arquivo} = req.body
     var arquivo = require(`./arquivos/${nome_arquivo}.json`)
     res.send(arquivo)
+})
+
+rotas.get('/exibirActivity/:nome_arquivo', (req, res) => {
+    var {nome_arquivo} = req.params
+    var resultado = ler_arquivo.ler(nome_arquivo)
+    res.send(resultado)
+})
+
+rotas.post('/exibirActivity', (req, res) => {
+    var {nome_arquivo} = req.body
+    var resultado = ler_arquivo.ler(nome_arquivo)
+    res.send(resultado)
 })
 
 module.exports = rotas

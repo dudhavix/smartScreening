@@ -1,3 +1,4 @@
 # Prova prática
--> No primeiro commit defini a pasta "arquivos" para armazenar o local onde ficaram os jsons
--> No segundo commit defini a rota "obterJson" com os tipos get e post para demonstrar duas formas de enviar o nome do arquivo a ser lido
+-> No primeiro commit defini a pasta "arquivos" para armazenar o local onde ficaram os jsons.
+-> No segundo commit defini a rota "obterJson" com os tipos get e post para demonstrar duas formas de enviar o nome do arquivo a ser lido.
+-> No terceiro commit defini a rota "exibirActivity" com os tipos get e post para demonstrar duas formas de enviar o nome do arquivo a ser lido. Criei também uma pasta chamada "controller" com o arquivo "ler_arquivo", nele consta a função "ler" que vai identificar o arquivo e retornar somente as chaves "exit_name" e "activity" que estão contidas na chave "exits".
