@@ -1,0 +1,59 @@
+Aqui ensinarei como utilizar a API 
+
+Primeiramente vamos definir nossa ulr base, como estamos localmente a url base utilizada é: http://localhost:5000/
+
+caso o senhor queira exibir um arquivo você pode escolher esses dois métodos POST ou GET
+se optar por GET basta acrescentar na url base /obterJson/nome_arquivo_sem_.json
+    sua url deve ficar assim
+        -> http://localhost:5000/obterJson/debugRasp_dca6326b8e7e_2021-02-11_09-42-55-521997_608_1613047391.0753915
+
+se optar por POST basta acrescentar na url base /obterJson e no corpo da requisição informar dessa maineira
+    {
+        nome_arquivo: nome_do_seu_arquivo_sem_.json
+    }
+    a url deve ficar assim
+        -> http://localhost:5000/obterJson
+    a requisição deve ficar assim
+        ->  {
+                "nome_arquivo": "debugRasp_dca6326b8e7e_2021-02-11_09-42-55-521997_609_1613047400.340135"
+            }
+
+------
+
+caso escolha exibir o exit_name e o activity também poderá escolher entre os dois métodos GET ou POST
+se escolher GET a forma de construção é bem parecida deve-se colocar na url base /exibirActivity/nome_arquivo_sem_.json
+    a url deve ficar assim
+        -> http://localhost:5000/exibirActivity/debugRasp_dca6326b8e7e_2021-02-11_09-42-55-521997_608_1613047391.0753915
+
+se escolher POST na url base vai informar /exibirActivity e o corpo da requisição vai se manter igual ao que foi mostrado em obterJson
+    a url vai ficar assim
+        -> http://localhost:5000/exibirActivity
+
+    e o corpo da requisição
+        ->  {
+                "nome_arquivo": "debugRasp_dca6326b8e7e_2021-02-11_11-01-09-709534_670_1613052073.9318397"
+            }
+
+------
+
+se quiser dessa vez calcular é media e mediana dos valores de activity de um arquivo, basta fazer como nas formas anteriores, escolher entre o método GET ou POST
+no método GET vai pegar a url base e acrescentar /meanActivity/nome_arquivo_sem_.json
+    a url deve ficar assim
+        -> http://localhost:5000/meanActivity/debugRasp_dca6326b8e7e_2021-02-11_09-42-55-521997_608_1613047391.0753915
+
+no método POST vai pegar a url base e acrescentar /meanActivity
+    a ulr deve ficar assim
+        -> http://localhost:5000/meanActivity
+    
+    e o corpo assim
+        ->  {
+                "nome_arquivo": "debugRasp_dca6326b8e7e_2021-02-11_11-01-09-709534_670_1613052073.9318397"
+            }
+
+------
+
+se quiser listar a média e mediana dos activity de todos os arquivos basta acrescentar na url base /listMeanActivity ja que para realizar tal ato 
+so tem o método GET
+    a url deve ficar assim
+        -> http://localhost:5000/listMeanActivity
+
