@@ -31,4 +31,18 @@ rotas.post('/exibirActivity', (req, res) => {
     res.send(resultado)
 })
 
+rotas.get('/meanActivity/:nome_arquivo', (req, res) => {
+    var {nome_arquivo} = req.params
+    var resultado = ler_arquivo.media_mediana(nome_arquivo)
+    res.send(resultado)
+})
+
+rotas.post('/meanActivity', (req, res) => {
+    var {nome_arquivo} = req.body
+    var resultado = ler_arquivo.media_mediana(nome_arquivo)
+    res.send(resultado)
+})
+
+
+
 module.exports = rotas

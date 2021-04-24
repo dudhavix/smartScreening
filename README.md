@@ -2,3 +2,4 @@
 -> No primeiro commit defini a pasta "arquivos" para armazenar o local onde ficaram os jsons.
 -> No segundo commit defini a rota "obterJson" com os tipos get e post para demonstrar duas formas de enviar o nome do arquivo a ser lido.
 -> No terceiro commit defini a rota "exibirActivity" com os tipos get e post para demonstrar duas formas de enviar o nome do arquivo a ser lido. Criei também uma pasta chamada "controller" com o arquivo "ler_arquivo", nele consta a função "ler" que vai identificar o arquivo e retornar somente as chaves "exit_name" e "activity" que estão contidas na chave "exits".
+-> No quarto commit defini a rota "meanActivity" como das vezes citadas acima. No controller "ler_arquivo" defini a função "media_mediana" que percorrerá o arquivo indicado e fará o calculo e trará os resultados do que foi pedido
