@@ -43,6 +43,9 @@ rotas.post('/meanActivity', (req, res) => {
     res.send(resultado)
 })
 
-
+rotas.get('/listMeanActivity', async (req, res)  => {
+    var resultado = await ler_arquivo.listMeanActivity()
+    res.send(resultado)
+})
 
 module.exports = rotas

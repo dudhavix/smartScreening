@@ -1,3 +1,5 @@
+const fs = require('fs').promises;
+
 module.exports = {
     ler(nome_arquivo) {
         var {exits} = require(`../arquivos/${nome_arquivo}.json`)
@@ -37,5 +39,19 @@ module.exports = {
         }
         
         return {media: media, mediana: mediana}
+    },
+
+    async listMeanActivity() {
+        var diretorio = 'E:/Projetos/smartScreening/arquivos'
+        var lista = []
+
+        let listaDeArquivos = await fs.readdir(diretorio);
+        
+        listaDeArquivos.map(async arquivo => {
+            var nome_arquivo = arquivo.replace(".json", "");
+            var valores = this.media_mediana(nome_arquivo)
+            lista.push({arquivo: arquivo, media: valores.media, mediana: valores.mediana})
+        })
+        return lista;
     }
 }
